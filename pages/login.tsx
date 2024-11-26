@@ -1,42 +1,13 @@
 export default function Login() {
-  return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>Login</h1>
-      <form style={{ marginTop: "20px" }}>
-        <input
-          type="email"
-          placeholder="Email"
-          style={{
-            padding: "10px",
-            margin: "10px",
-            borderRadius: "5px",
-            border: "1px solid #ccc",
-          }}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          style={{
-            padding: "10px",
-            margin: "10px",
-            borderRadius: "5px",
-            border: "1px solid #ccc",
-          }}
-        />
-        <button
-          type="submit"
-          style={{
-            padding: "10px 20px",
-            backgroundColor: "#0070f3",
-            color: "#fff",
-            border: "none",
-            borderRadius: "5px",
-            cursor: "pointer",
-          }}
-        >
-          Login
-        </button>
-      </form>
-    </div>
-  );
-}
+    return (
+      <div className="login-page min-h-screen flex items-center justify-center">
+        <div className="bg-white p-8 rounded shadow-lg">
+          <h2 className="text-2xl font-bold mb-4">Login</h2>
+          <input className="block w-full p-2 border rounded mb-4" type="text" placeholder="Email" />
+          <input className="block w-full p-2 border rounded mb-4" type="password" placeholder="Password" />
+          <button className="w-full py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Login</button>
+        </div>
+      </div>
+    );
+  }
+  

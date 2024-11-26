@@ -1,42 +1,29 @@
-import Link from "next/link";
+import { useRouter } from 'next/router';
 
 export default function Home() {
-  return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>Welcome to the Movie Watchlist App</h1>
-      <p>Login or view your watchlist below:</p>
-      <div style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
-        {/* Link to Login */}
-        <Link href="/login">
-          <button
-            style={{
-              padding: "10px 20px",
-              backgroundColor: "#0070f3",
-              color: "#fff",
-              border: "none",
-              borderRadius: "5px",
-              cursor: "pointer",
-            }}
-          >
-            Login
-          </button>
-        </Link>
+  const router = useRouter();
 
-        {/* Link to Watchlist */}
-        <Link href="/watchlist">
-          <button
-            style={{
-              padding: "10px 20px",
-              backgroundColor: "#0070f3",
-              color: "#fff",
-              border: "none",
-              borderRadius: "5px",
-              cursor: "pointer",
-            }}
-          >
-            Go to Watchlist
-          </button>
-        </Link>
+  const navigateTo = (path: string) => {
+    router.push(path);
+  };
+
+  return (
+    <div className="index-page min-h-screen flex flex-col items-center justify-center">
+      <h1 className="text-4xl font-bold">Welcome to the Movie Watchlist App</h1>
+      <p className="mt-4">Login or view your watchlist below:</p>
+      <div className="mt-6 space-x-4">
+        <button
+          onClick={() => navigateTo('/login')}
+          className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+        >
+          Login
+        </button>
+        <button
+          onClick={() => navigateTo('/watchlist')}
+          className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
+        >
+          Go to Watchlist
+        </button>
       </div>
     </div>
   );

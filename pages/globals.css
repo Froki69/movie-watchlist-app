@@ -1,3 +1,20 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* globals.css */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Page-specific backgrounds */
+.index-page {
+  background-color: #f0f8ff; /* Light Blue for Home Page */
+}
+
+.login-page {
+  background-color: #2c3e50; /* Dark Gray for Login Page */
+  color: #ecf0f1; /* Light Text Color */
+}
+
+.watchlist-page {
+  background-color: #fdf6e3; /* Light Cream for Watchlist Page */
+  color: #2c3e50; /* Dark Text Color */
+}
